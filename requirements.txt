@@ -1,0 +1,5 @@
+pandas
+numpy
+fyers-apiv3
+scikit-learn
+matplotlib
