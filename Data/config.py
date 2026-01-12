@@ -5,9 +5,6 @@ CLIENT_ID = "6LV74LVY1F-100"
 SECRET_KEY = "NAWBTNX48Q"
 REDIRECT_URI = "http://127.0.0.1:5000/redirect"
 
-# Paste your NEW access token here after you generate it
-ACCESS_TOKEN = "YOUR_ACCESS_TOKEN_HERE" 
-
 # ==========================================
 # ⚙️ STRATEGY SETTINGS
 # ==========================================
