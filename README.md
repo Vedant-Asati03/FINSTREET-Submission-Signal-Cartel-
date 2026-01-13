@@ -123,6 +123,8 @@ We transform raw price data into predictive signals using:
 * **Max Drawdown**: Controlled via Volatility Targeting.
 * **Execution**: Validated via Fyers API payload generation.
 
+![metrics](./random_forest_strategy_performance.png)
+
 ---
 
 ### Disclaimer
