@@ -365,3 +365,4 @@ else:
     axes[2].grid(True, alpha=0.3)
 
     plt.tight_layout()
+    plt.savefig("strategy_performance.png")
