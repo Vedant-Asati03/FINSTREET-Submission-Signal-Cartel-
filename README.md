@@ -42,6 +42,9 @@ Kshitij2026_AlgoStrategy/
 └── README.md
 
 ---
+```
+
+
 
 ## 🛠️ Setup & Installation
 
@@ -56,7 +59,6 @@ Run the following command to install the required libraries:
 ```bash
 pip install -r requirements.txt
 
-```
 
 ### 3. API Configuration
 
