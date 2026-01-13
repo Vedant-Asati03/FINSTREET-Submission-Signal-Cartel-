@@ -44,7 +44,7 @@ Kshitij2026_AlgoStrategy/
 ---
 ```
 
-
+---
 
 ## 🛠️ Setup & Installation
 
@@ -59,6 +59,7 @@ Run the following command to install the required libraries:
 ```bash
 pip install -r requirements.txt
 
+```
 
 ### 3. API Configuration
 
@@ -137,6 +138,8 @@ We transform raw price data into predictive signals using:
 ### Disclaimer
 
 This project is for educational and hackathon evaluation purposes. All API calls in `execution.py` are set to **Print-Only Mode** to prevent accidental real-money trades during testing.
+
+```
 
 ```
 
