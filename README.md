@@ -11,34 +11,6 @@ The system leverages a **Random Forest Classifier** to predict short-term price 
 
 ---
 
-## Key Features
-
-* **Automated Data Pipeline**: Fetches historical daily OHLCV data directly from the Fyers API.
-* **Machine Learning Core**: Uses a Random Forest model trained on technical indicators (RSI, MACD, Bollinger Bands) to predict directional moves.
-* **Walk-Forward Validation**: Retrains the model daily to prevent look-ahead bias and adapt to changing market regimes.
-* **Risk Management**: Implements **Volatility Targeting** to dynamically adjust position sizes based on market risk.
-* **Live Execution Ready**: Generates compliant API payloads for the Fyers trading ecosystem.
-
----
-
-## Repository Structure
-
-```text
-Kshitij2026_AlgoStrategy/
-│
-├── Data/                        # Data Generation Zone
-│   ├── fyers_api_integration.ipynb  # [STEP 1] Run this to fetch data
-│   ├── SONATSOFTW_daily_...csv      # output CSV (Historical Data)
-│   ├── access_token.txt             # generated token
-│   └── config.py
-│
-├── main.py                      # [STEP 2] Main Strategy Script
-├── requirements.txt
-└── README.md
-```
-
----
-
 ## Setup & Installation
 
 ### 1. Prerequisites
@@ -55,8 +27,8 @@ pip install -r requirements.txt
 
 ### 3. API Configuration
 
-1. Open `src/config.py`.
-2. Add your **Fyers Client ID**.
+1. Open `Data/config.py`.
+2. Add your **Fyers Client ID** and **Client Secret**.
 3. The system automatically reads the **Access Token** from `Data/access_token.txt` (which is generated in the next step).
 
 ---
@@ -79,15 +51,7 @@ Execute the main script from the root folder to process features, run the backte
 python main.py
 ```
 
-* **Output**: This will print the performance metrics (Sharpe Ratio, Total Return) and save a performance chart as `Strategy_Performance.png`.
-
-### Step 3: View January Predictions
-
-To see the model's specific logic for the Jan 1st - Jan 8th prediction window:
-
-```bash
-python predict_january.py
-```
+* **Output**: This will print the performance metrics (Sharpe Ratio, Total Return) and save a performance chart as `strategy_performance.png`.
 
 ---
 
@@ -123,10 +87,10 @@ We transform raw price data into predictive signals using:
 * **Max Drawdown**: Controlled via Volatility Targeting.
 * **Execution**: Validated via Fyers API payload generation.
 
-![metrics](./random_forest_strategy_performance.png)
+![metrics](./strategy_performance.png)
 
 ---
 
 ### Disclaimer
 
-This project is for educational and hackathon evaluation purposes. All API calls in `execution.py` are set to **Print-Only Mode** to prevent accidental real-money trades during testing.
+> This project is for educational and hackathon evaluation purposes. All API calls in `execution.py` are set to **Print-Only Mode** to prevent accidental real-money trades during testing.
