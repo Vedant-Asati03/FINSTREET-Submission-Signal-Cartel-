@@ -54,7 +54,7 @@ Ensure you have Python 3.8+ installed.
 
 ### 2. Install Dependencies
 
-Run the following command to install the required libraries:
+Run the following command to install the required libraries, make sure if you are not keeping the files in the same folder put the whole file address in the command:
 
 ```bash
 pip install -r requirements.txt
