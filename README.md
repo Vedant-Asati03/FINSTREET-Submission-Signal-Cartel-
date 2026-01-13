@@ -28,7 +28,7 @@ pip install -r requirements.txt
 ### 3. API Configuration
 
 1. Open `Data/config.py`.
-2. Add your **Fyers Client ID** and **Client Secret**.
+2. Add **Client ID, Client Secret, Redirect URI** to `.env` file.
 3. The system automatically reads the **Access Token** from `Data/access_token.txt` (which is generated in the next step).
 
 ---
