@@ -4,21 +4,22 @@ from typing import Any, Dict
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from dotenv import load_dotenv
 from fyers_apiv3 import fyersModel
 from sklearn.ensemble import RandomForestClassifier
 
-from Data.config import (
-    BACKTEST_START,
-    CLIENT_ID,
-    CONFIDENCE_THRESHOLD,
-    MAX_LEVERAGE,
-    MOCK_MODE,
-    OS_END,
-    OS_START,
-    START_DATE_DATA,
-    TARGET_VOL,
-    TICKER,
-)
+load_dotenv()
+
+BACKTEST_START = os.getenv("BACKTEST_START", "2022-01-01")
+CLIENT_ID = os.getenv("CLIENT_ID", "")
+CONFIDENCE_THRESHOLD = float(os.getenv("CONFIDENCE_THRESHOLD", "0.6"))
+MAX_LEVERAGE = float(os.getenv("MAX_LEVERAGE", "3.0"))
+MOCK_MODE = os.getenv("MOCK_MODE", "False").lower() == "true"
+OS_END = os.getenv("OS_END", "2023-12-31")
+OS_START = os.getenv("OS_START", "2022-07-01")
+START_DATE_DATA = os.getenv("START_DATE_DATA", "2021-01-01")
+TARGET_VOL = float(os.getenv("TARGET_VOL", "0.02"))
+TICKER: str = os.getenv("TICKER", "NSE:SONATSOFTW-EQ")
 
 access_token = None
 
