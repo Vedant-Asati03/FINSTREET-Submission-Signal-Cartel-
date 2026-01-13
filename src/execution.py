@@ -25,13 +25,13 @@ def execute_order(fyers, symbol, action, qty=1):
     
     try:
         # ---------------------------------------------------------
-        # REAL MONEY ZONE: Keep commented for Hackathon Submission
+        # Code is commented to avoid accidental real money trades
         # response = fyers.place_order(data=data)
         # ---------------------------------------------------------
         
         # PROOF OF LOGIC: Print the exact payload we WOULD send
-        print(f"\n🚀 [EXECUTION TRIGGERED] Action: {action} | Symbol: {symbol}")
-        print(f"📦 API Payload: {data}")
+        print(f"\n [EXECUTION TRIGGERED] Action: {action} | Symbol: {symbol}")
+        print(f"API Payload: {data}")
         
     except Exception as e:
         print(f"❌ Execution Failed: {e}")
