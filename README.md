@@ -1,6 +1,3 @@
-# FINSTREET-Submission-Signal-Cartel-
-Submission for Round 2 of the Finstreet Hackathon
-
 # 📈 ML-Driven Algo Trading Strategy (Kshitij 2026 - FinStreet)
 
 **Team Name:** Signal Cartel  
