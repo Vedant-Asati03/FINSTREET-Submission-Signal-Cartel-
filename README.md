@@ -24,16 +24,19 @@ The system leverages a **Random Forest Classifier** to predict short-term price 
 ```text
 Kshitij2026_AlgoStrategy/
 │
-├── Data/                        # Stores fetched market data & access tokens
-│   └── SONATSOFTW_daily_...csv  # Historical data used for backtesting
+├── Data/                        # Data Generation Zone
+│   ├── FYERS_API_Integration.ipynb  # [STEP 1] Run this to fetch data
+│   ├── SONATSOFTW_daily_...csv      # The output CSV (Historical Data)
+│   └── access_token.txt             # The generated token
 │
-├── src/                         # Source code for strategy logic
-│   ├── config.py                # API Credentials & Strategy Settings
-│   ├── features.py              # Technical Indicator Calculation
-│   ├── strategy.py              # Random Forest Model & Backtest Logic
-│   └── execution.py             # Fyers API Order Placement Logic
+├── src/                         # Strategy Logic Zone
+│   ├── __init__.py              # (Empty file)
+│   ├── config.py                # API Credentials & Settings
+│   ├── features.py              # Feature Engineering
+│   ├── strategy.py              # Random Forest Model
+│   └── execution.py             # Trade Execution Logic
 │
-├── main.py                      # MAIN SCRIPT: Orchestrates the entire workflow
-├── FYERS_API_Integration.ipynb  # Notebook to Authenticate & Fetch Data
-├── predict_january.py           # Output logic for Jan 1 - Jan 8 Predictions
-└── requirements.txt             # List of dependencies
+├── main.py                      # [STEP 2] Main Strategy Script
+├── predict_january.py           # [STEP 3] Prediction Rules for Judges
+├── requirements.txt
+└── README.md
